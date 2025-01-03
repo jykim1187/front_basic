@@ -30,6 +30,15 @@
         }
 
     </style>
+    <script>
+        function updateDemo1(){
+            document.getElementById("demo1").innerHTML="hello world1";
+        }
+        document.getElementById("load1").innerHTML="hello world load1"
+
+    </script>
+    <!-- 외부 js import시에 아래와 같이 선언언 -->
+    <script  src="js/myjs.js"></script>
 </head>
 <body>
     <!-- css적용방법 3가지 : 인라인, 내부스타일, 외부스타일 -->
@@ -54,5 +63,31 @@
 
     </div>
       <!-- 자식선택자 : 직계자식에게만 영향 -->
+
+
+
+      <h2>javascript예시</h2>
+      <p id="demo1">변경될 내용1</p>
+      <button onclick="updateDemo1()">변경버튼1</button>
+      <p id="demo2">변경될 내용2</p>
+      <button onclick="updateDemo2()">변경버튼2</button>
+      <p id="demo3">변경될 내용3</p>
+      <button onclick="updateDemo3()">변경버튼3</button>
+
+        <h2>js로드 순서</h2>
+        <p id="load1">js 로드1</p>
+        <p id="load2">js 로드2</p>
+
+
+<!-- script태그는 헤드부분에 있어도 되고 바디부분에 있어도 된다//document는 이html문서를 가르킨다다 -->
+      <script>
+        document.getElementById("load2").innerHTML="hello world load2"
+        function updateDemo2(){
+            document.getElementById("demo2").innerHTML="hello world2";
+        }
+
+      </script>
+
+
 </body>
 </html>
