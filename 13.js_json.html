@@ -57,6 +57,7 @@
         for(let i=0; i<obj2.length; i++){
             // javascript에서 문자열에 js변수를 끼워넣을때 백틱에 ${}를 활용
             document.getElementById("tbody").innerHTML += `<tr><td>${obj2[i].name}</td><td>${obj2[i].age}</td><td>${obj2[i].score}</td></tr>`;
+        // 원래라면 "<tr><td>" + obj2[i].name + "</td><td>" + obj[i].age + "</td><td>" + obj2[i].score + "</td></tr>"
         }
 
         //json 직렬화
